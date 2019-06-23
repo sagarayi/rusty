@@ -1,50 +1,54 @@
 extern crate rand;
 
-use std::io;
-use rand::Rng;
-use std::cmp::Ordering;
+// use std::io;
+// use rand::Rng;
+// use std::cmp::Ordering;
+
+mod insertion_sort;
 
 
 fn main()
 {
-    println!("The 'Guess the number' game ");
 
-    let random_number = rand::thread_rng().gen_range(1,101);
+	insertion_sort::main();
+  //   println!("The 'Guess the number' game ");
 
-    println!("The random number generated is : {}",random_number);
+  //   let random_number = rand::thread_rng().gen_range(1,101);
 
-    loop 
-    {
-		println!("Please enter your guess");
+  //   println!("The random number generated is : {}",random_number);
 
-	    let mut user_guess = String::new();
+  //   loop 
+  //   {
+		// println!("Please enter your guess");
 
-	    io::stdin().read_line(&mut user_guess)
-	    	.expect("Failed to read the input");
+	 //    let mut user_guess = String::new();
 
-	    let user_guess: u32 = match user_guess.trim().parse()
-	    	{
-	    		Ok(num) => num,
-	    		Err(_) =>
-	    		{
-	    			println!("Error : Only numbers accepted");
-	    			continue;
-	    		}
-	    	};
+	 //    io::stdin().read_line(&mut user_guess)
+	 //    	.expect("Failed to read the input");
 
-		println!("Your guess is : {}",user_guess);
+	 //    let user_guess: u32 = match user_guess.trim().parse()
+	 //    	{
+	 //    		Ok(num) => num,
+	 //    		Err(_) =>
+	 //    		{
+	 //    			println!("Error : Only numbers accepted");
+	 //    			continue;
+	 //    		}
+	 //    	};
+
+		// println!("Your guess is : {}",user_guess);
 
 
-	    match user_guess.cmp(&random_number) 
-	    {
-	    	Ordering::Less => println!("Too small !"),
-	    	Ordering::Greater => println!("Too Big !"),
-	    	Ordering::Equal => 
-	    	{
-	    		println!("Perfect !!!");
-	    		break;
-	    	}
-	    }
+	 //    match user_guess.cmp(&random_number) 
+	 //    {
+	 //    	Ordering::Less => println!("Too small !"),
+	 //    	Ordering::Greater => println!("Too Big !"),
+	 //    	Ordering::Equal => 
+	 //    	{
+	 //    		println!("Perfect !!!");
+	 //    		break;
+	 //    	}
+	 //    }
     	
-    }
+  //   }
 }
