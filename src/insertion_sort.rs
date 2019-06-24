@@ -36,4 +36,23 @@ pub fn main() {
 	}
 
 	print!("The entered numbers are  {:?}", arr_inp );
+
+	sort_array(arr_inp);
+}
+
+fn sort_array(mut arr: Vec<i32>) {
+
+	let mut temp;
+
+	for i in 0..arr.len() {
+		for j in i..arr.len() {
+			if arr[j]>arr[i] {
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+
+	print!("The sorted array is {:?}", arr);
 }
