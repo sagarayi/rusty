@@ -9,4 +9,5 @@ This repository contains a list of programs implementing various algorithms writ
 
 - User Menu
 - Insertion Sort
+- Bubble Sort
 - Guessing game 
