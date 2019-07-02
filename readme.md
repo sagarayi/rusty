@@ -10,4 +10,5 @@ This repository contains a list of programs implementing various algorithms writ
 - User Menu
 - Insertion Sort
 - Bubble Sort
+- Simple encryption - Daily coding problem
 - Guessing game 
