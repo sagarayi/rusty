@@ -6,6 +6,7 @@ mod insertion_sort;
 mod bubble_sort;
 mod guess_number;
 mod boiler_plate;
+mod encrypt_decrypt;
 
 
 fn main()
@@ -13,7 +14,8 @@ fn main()
 	match display_menu() {
 		1 => bubble_sort::sort_array(boiler_plate::number_array_input()),
 		2 => insertion_sort::sort_array(),//boiler_plate::number_array_input()),
-		3 => guess_number::main(),
+		3 => encrypt_decrypt::encrypt(boiler_plate::get_string_input("Enter the string to be encrypted : ".to_string())),
+		4 => guess_number::main(),
 		_ => println!("Invalid Option. Ok Bye ;)"),
 	}
 }
@@ -25,6 +27,7 @@ fn display_menu() -> i32 {
 	println!("***************************************");
 	println!("1. Bubble Sort");
 	println!("2. Insertion Sort");
+	println!("3. Simple encrypt : Daily coding problem");
 	println!("Bonus : Guessing game - Press (last_option + 1)");
 
 	print!("Enter your choice : ");

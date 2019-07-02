@@ -31,3 +31,16 @@ print!("The entered numbers are  {:?}", arr_inp );
 
 return arr_inp;
 }	
+
+pub fn get_string_input(user_display_text: String) -> String {
+
+	print!("{}",user_display_text);
+	io::stdout().flush().unwrap();
+
+	let mut buffer = String::new();
+
+	io::stdin().read_line(&mut buffer).expect("Failed to read");
+
+	return buffer.trim().to_string();
+
+} 
