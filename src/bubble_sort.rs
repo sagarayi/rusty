@@ -1,5 +1,9 @@
+extern crate time;
+use self::time::PreciseTime;
 
 pub fn sort_array(mut arr: Vec<i32>) {
+
+let start = PreciseTime::now();
 
 	let mut temp;
 
@@ -12,6 +16,7 @@ pub fn sort_array(mut arr: Vec<i32>) {
 			}
 		}
 	}
-
+let end = PreciseTime::now();
 	println!("The sorted array is {:?}", arr);
+	println!("Execution time is {}",start.to(end) );
 }
